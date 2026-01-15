@@ -1,0 +1,340 @@
+@keyframes song-chay {
+  to {
+    background-position: 200% center;
+  }
+}
+@keyframes song-nhay{
+    0%, 100% { 
+        height: 10px; 
+        opacity: 0.5; 
+        background-color: #0c2315; 
+    }
+    50% { 
+        height: 40px; 
+        opacity: 1; 
+        background-color: #00ff88; 
+    }
+}
+
+.welcome-text {
+  font-size: 45px;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  
+  background: linear-gradient(to right, #0052D4, #65C7F7, #0052D4);
+  background-size: 200% auto;
+  
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  
+  animation: song-chay 3s linear infinite;
+}
+.welcome-text.hidden {
+    opacity: 0;      
+    height: 0;       
+    margin: 0;       
+    overflow: hidden; 
+    transition: all 0.5s ease;
+}
+body{
+    background-image: url('Anh/anhnen.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: overlay;
+
+    color: white;
+    font-family: sans-serif;
+    min-height:100vh;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+}
+.player-container{
+    text-align: center;
+}
+.song-name {
+    font-size: 40px; 
+    margin: 0 0 50px 0; 
+    background: linear-gradient(to right, #109a47, #053d76,#146b37);
+    background-size:200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 10px rgba(0, 242, 96, 0.3));
+    animation: song-chay 3s linear infinite;
+}
+.music-box{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 30px;
+}
+.disk img{
+    width:500px;
+    height:auto;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    transform: translateX(0);
+}
+.hide-content {
+    opacity: 0 !important; 
+    transform: translateX(-50px) !important;
+}
+.audio-control{
+    width:500px;
+    
+    display: flex;             
+    flex-direction: column;    
+    align-items: center;     
+    justify-content: center;
+    
+}
+.sound-wave{
+    display: flex;
+    height: 50px;              
+    margin-bottom: 15px;      
+    gap: 5px;
+}
+.bar{
+    width: 10px;
+    background: #0c2315;       
+    border-radius: 5px;
+    animation: song-nhay 1s infinite ease-in-out;
+}
+.bar:nth-child(1) { height: 10px; animation-delay: 0.1s; }
+.bar:nth-child(2) { height: 25px; animation-delay: 0.3s; }
+.bar:nth-child(3) { height: 15px; animation-delay: 0.5s; }
+.bar:nth-child(4) { height: 30px; animation-delay: 0.2s; }
+.bar:nth-child(5) { height: 15px; animation-delay: 0.4s; }
+.audio-player{
+    flex:1;
+    height:40px;
+    outline:none;
+    border-radius:20px;
+    filter: invert(1) hue-rotate(180deg) drop-shadow(0 0 5px cyan);
+    opacity: 0.9;
+}
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+.prev-btn,.next-btn{
+    background:none;
+    border: none;
+    cursor:pointer;
+    font-size:40px;
+    background: linear-gradient(to right, #109a47, #053d76, #146b37);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: song-chay 3s linear infinite;
+    filter: drop-shadow(0 0 5px rgba(0, 242, 96, 0.4));
+    
+    transition: 0.3s;
+    
+    flex-shrink:0;
+}
+.next-btn:hover{
+    transform: scale(1.2) translateX(5px);
+    filter: drop-shadow(0 0 15px rgba(0, 242, 96, 0.8));
+}
+.prev-btn:hover{
+    transform: scale(1.2) translateX(-5px); 
+    filter: drop-shadow(0 0 15px rgba(0, 242, 96, 0.8));
+}
+.song-name.orange{
+    background: linear-gradient(to right, #b74f0a, #ff9068, #e93508);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: song-chay 3s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(255, 75, 31, 0.6));
+}
+.disk img,.song-name{
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    transform: translateX(0);
+}
+.hide-content{
+    opacity: 0;
+    transform: translateX(-50px);
+}
+.welcome-text.hidden{
+    opacity: 0;       
+    height: 0;        
+    margin: 0;        
+    overflow: hidden; 
+    transition: all 0.5s ease;
+}
+.song-name.blue-red{
+    background:linear-gradient(to right, #e90606, #690cb1, #d91111);
+    background-size:200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: song-chay 3s linear infinite;
+
+    filter: drop-shadow(0 0 10px rgba(0, 198, 255, 0.6));
+}
+.song-name.red-black {
+   
+    background: linear-gradient(to right, #e43131, #e88e8e, #a8a8a8, #ff0000);
+    
+  
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    
+    animation: song-chay 3s linear infinite;
+    
+   
+    filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
+}
+
+.song-name.pink-red {
+   
+    background: linear-gradient(to right, #ea1ed9, #e60909, #dac60d, #e976ca);
+    
+ 
+    background-size: 200% auto;
+    
+  
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    
+    animation: song-chay 3s linear infinite;
+    
+    filter: drop-shadow(0 0 10px rgba(255, 195, 160, 0.6));
+}
+.song-name.stereo-hearts {
+    
+    background: linear-gradient(to right, #03264b, #0dd90d, #206ec2, #180303, #cd0acd, #ffffff, #c67013);
+    
+    
+    background-size: 600% auto;
+    
+    
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    
+   
+    animation: song-chay 5s linear infinite;
+    
+   
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.6));
+}
+
+.song-name.random {
+    
+    background-size: 300% auto;
+    
+    
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    
+   
+    animation: song-chay 4s linear infinite;
+    
+   
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+.search-box {
+    position: fixed; 
+    top: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 10px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 9999; 
+    transition: all 0.3s ease;
+}
+#search-input {
+    border: none;
+    background: transparent;
+    outline: none;
+    color: white;
+    padding: 0;
+    font-size: 16px;
+    width: 0; /* Ban đầu ẩn */
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+/* Khi bấm kính lúp thì ô nhập hiện ra */
+.search-box.active #search-input {
+    width: 250px;
+    padding: 0 10px;
+    opacity: 1;
+}
+/* Nút kính lúp */
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+}
+/* Danh sách gợi ý */
+.suggestions-list {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    width: 250px;
+    background: rgba(20, 20, 20, 0.95);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    overflow: hidden;
+    display: none; /* Mặc định ẩn */
+}
+.suggestions-list.show {
+    display: block; /* Có kết quả thì hiện */
+}
+
+.suggestions-list li {
+    padding: 12px 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+    color: #ccc;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.suggestions-list li:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding-left: 20px;
+}
+
+/* Ảnh nhỏ trong gợi ý */
+.suggestions-list li img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}

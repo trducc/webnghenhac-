@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0W3E5VV8HR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0W3E5VV8HR');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEcho🎶 </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="search-box" id="search-box">
+        <input type="text" id="search-input" placeholder="Nhập tên bài bạn muốn nghe...">
+        <button class="search-btn" id="search-toggle">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <ul class="suggestions-list" id="suggestions"></ul>
+    </div>
+    <div class="player-container">
+        <h2 class="welcome-text" id="loi-chao"> Chào mừng bạn đến với web nghe nhạc DEcho
+        </h2>
+        <h1 class="song-name" id ='ten-bai-hat'>Photograph</h1>
+        <div class="music-box">
+            <button class="prev-btn" onclick="prevSong()">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            
+            <div class="disk">
+            <img src="Anh/anhbia.jpg" alt="Ảnh bìa" id="anh-bia">
+        </div>
+        <div class="audio-control">
+            <div class="sound-wave">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="control-group">
+                
+                <audio controls class="audio-player" id="may-phat-nhac">
+
+                <source src="Nhac/photograph.mp3" type="audio/mpeg">
+            </audio>
+            <button class="next-btn" onclick="nextSong()">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+            </div>
+            
+        </div>
+       
+
+        </div>
+        
+    </div>
+    <script src="main.js"></script>
+    
+</body>
+</html>
